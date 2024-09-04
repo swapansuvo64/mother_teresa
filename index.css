@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background: url('https://www.mapsofindia.com/ci-moi-images/my-india/2013/03/mother-teresa.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire header area */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Ensure elements like text stay above the background */
+    height: 300px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    flex-direction: column; /* Stack the text (h1 and p) vertically */
+    font-size: 25px;
+  }
+  
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay with transparency for better text visibility */
+    z-index: 1; /* Keep the overlay behind the text */
+  }
+  
+  header h1,
+  header p {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the background and overlay */
+  }
+  
+  
+  nav {
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  blockquote {
+    font-style: italic;
+    background: #ecf0f1;
+    padding: 10px;
+    border-left: 5px solid #34495e;
+    margin-bottom: 10px;
+  }
+  
+
+  
+  footer {
+    background: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    
+  }
+  
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%; /* Adjust this value to handle the 5 images */
+    animation: slide 25s infinite; /* Adjust duration for slower transitions */
+    height: 100%;
+  }
+  
+  .slides img {
+    width: 50%; /* Show 2 images at a time */
+    height: auto;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    16.66% {
+      transform: translateX(0);
+    }
+    33.33% {
+      transform: translateX(-33.33%);
+    }
+    49.99% {
+      transform: translateX(-33.33%);
+    }
+    66.66% {
+      transform: translateX(-66.66%);
+    }
+    83.33% {
+      transform: translateX(-66.66%);
+    }
+    100% {
+      transform: translateX(0); /* Loop back to the start */
+    }
+  }
+  
